@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">SwearVer2</string>
+    <string name="intro">Join thousands of other users</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="login">Already have an account?</string>
+    <string name="share_subject"></string>
+    <string name="share_message"></string>
+    <string name="intro_message">"'스웨어'는 고객님의 자기발전을 돕습니다.
+        \n\n[스웨어 사용법] \n\n1.'create'버튼을 눌러 자신과의 약속을 정합니다.
+        \n보증금을 걸어서 약속 이행률을 높이세요. 약속을 지키면 보증금을 돌려받을 수 있습니다.
+        \n\n2. 약속을 지인에게 공유하세요. 지인들은 당신이 약속을 지키는지 안 지키는지 감시하거나, 응원의 메시지를 보낼 수 있습니다.
+        \n\n3. Assistant 기능을 사용해 보세요. 메인화면 하단의 마이크 버튼을 클릭하면, 똑똑한 비서인 Jarvis가 당신을 도와 드릴 것입니다.
+        \n예시) "Could you check my promises?" - 약속의 진행상황을 자비스가 확인해 드립니다.
+        \n(Jarvis는 영국인입니다) "</string>
+    <string name="alert_example">George.B가 [하루에 코드 만줄..]을 열람했습니다.</string>
+    <string name="alert_example2">George.B가 [하루에 코드 만줄..]에 메시지를 남겼습니다.</string>
+    <string name="alert_example3">[하루에 코드 만줄..] 약속 이행 기간이 종료되었습니다. 최종결과를 입력해주세요.</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="delete">정말 삭제하시겠습니까?</string>
+    <string name="confirm">약속을 확정 하시겠습니까? \n확정 후에는 수정할 수 없습니다.</string>
+    <string name="messageToast">하단 왼쪽 버튼: 친구가 쓴 보고서 열람이 가능합니다. \n- 하단 오른쪽 버튼: 친구에게 독려 메시지를 보낼 수 있습니다."</string>
+    <string name="apiKey">AIzaSyDQmzfncbrsEFEEX_qTpPLWfS9TlUt0obg</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+
+</resources>

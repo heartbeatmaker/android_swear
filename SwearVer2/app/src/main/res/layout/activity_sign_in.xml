@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_bg"
+    tools:context=".SignIn">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="60dp"
+        app:srcCompat="@drawable/logoss" />
+
+
+    <TextView
+        android:id="@+id/signupbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignRight="@id/imageView3"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/sign_up"
+        android:textColor="#DCDCDC"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="44dp"
+        android:background="#80DCDCDC"
+        android:drawableLeft="@drawable/ic_action_email"
+        android:ems="30"
+        android:fontFamily="sans-serif-light"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textAllCaps="false"
+        android:textColor="#4B73E1"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/editText3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="44dp"
+        android:background="#80DCDCDC"
+        android:drawableLeft="@drawable/ic_action_password"
+        android:ems="30"
+        android:fontFamily="sans-serif-light"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textAllCaps="false"
+        android:textColor="#4B73E1"
+        android:textSize="30dp" />
+
+
+    <TextView
+        android:id="@+id/loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/password"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="44dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Login"
+        android:textColor="#DCDCDC"
+        android:textSize="20sp" />
+
+    <!--<Button-->
+        <!--android:id="@+id/button"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/loginbtn"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginStart="70dp"-->
+        <!--android:layout_marginLeft="0dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_marginEnd="70dp"-->
+        <!--android:layout_marginRight="0dp"-->
+        <!--android:text="소셜 로그인" />-->
+
+    <!--<Switch-->
+        <!--android:id="@+id/switch2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/signupbtn"-->
+        <!--android:layout_marginTop="116dp"-->
+        <!--android:checked="false"-->
+        <!--android:text="ID/비밀번호 기억하기"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:paddingRight="30dp"-->
+        <!--android:paddingLeft="30dp"/>-->
+
+
+</RelativeLayout>

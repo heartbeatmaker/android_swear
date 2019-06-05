@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main">
+
+<RelativeLayout
+
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/mainActivity_floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        app:srcCompat="@drawable/ic_keyboard_voice_black_24dp" />
+
+    <RelativeLayout
+        android:id="@+id/main_relativeLayout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grad_bg"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <ImageButton
+            android:id="@+id/btn_openDrawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="#00ff0000"
+            app:srcCompat="@android:drawable/ic_menu_sort_by_size"
+            android:layout_alignParentLeft="true"/>
+
+        <ImageButton
+            android:id="@+id/searchbtn"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/people"
+            android:scaleType="fitCenter"
+            android:layout_toLeftOf="@id/message_frameLayout"
+            android:layout_marginRight="25dp"/>
+
+
+        <FrameLayout
+            android:id="@+id/message_frameLayout"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/alarm_frameLayout">
+
+            <ImageButton
+                android:id="@+id/main_readMessage_ImageBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_message"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/main_unreadMessage_textView"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="right|bottom"
+                android:background="@color/quantum_googred"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/alarm_frameLayout"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true">
+
+            <ImageButton
+                android:id="@+id/alertbtn"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_notifications"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/main_unreadAlarmMessage_textView"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="right|bottom"
+                android:background="@color/quantum_googred"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/main_profile_ImageView"
+            android:layout_width="93dp"
+            android:layout_height="98dp"
+            android:adjustViewBounds="true"
+            android:background="#00ff0000"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/main_relativeLayout_top"
+            app:srcCompat="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/main_username_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:text="YonJu"
+        android:layout_centerInParent="true"
+        android:textSize="16sp"
+        android:layout_below="@id/main_profile_ImageView"/>
+
+
+        <LinearLayout
+            android:id="@+id/recommendBar_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_below="@id/main_username_textView"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/recommend_title_textView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="[추천] 이런 약속은 어떠세요?"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/rec_text"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/viewPager_linearLayout"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/recommendBar_linearLayout">-->
+
+
+        <!--<Button-->
+            <!--android:id="@+id/inProgress_btn"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="진행중"-->
+            <!--android:background="#00ff0000"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/complete_btn"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="완료"-->
+            <!--android:background="#00ff0000"-->
+            <!--android:layout_toRightOf="@id/inProgress_btn"/>-->
+
+    <!--</LinearLayout>-->
+
+
+    <Button
+        android:id="@+id/mainCreateBtn"
+        android:layout_width="134dp"
+        android:layout_height="46dp"
+        android:text="Create"
+        android:textSize="14sp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/recommendBar_linearLayout"
+        android:layout_alignParentRight="true"/>
+
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/main_viewPager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@id/mainCreateBtn"-->
+        <!--android:layout_margin="10dp"/>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/main_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mainCreateBtn"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"/>
+
+
+
+    <!--<TableLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_marginTop="320dp"-->
+       <!--android:outlineSpotShadowColor="@color/colorPrimary">-->
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+        <!--</TableRow>-->
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_alignStart="@+id/null"-->
+            <!--android:background="@drawable/border">-->
+
+            <!--<FrameLayout-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@drawable/border">-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/editText4"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:background="@null"-->
+                    <!--android:ems="10"-->
+                    <!--android:gravity="center"-->
+                    <!--android:inputType="number"-->
+                    <!--android:text="14%"-->
+                    <!--android:textSize="25sp" />-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/imageView7"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="100dp"-->
+                    <!--app:srcCompat="@android:drawable/btn_radio" />-->
+            <!--</FrameLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="310dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView8"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="하루에 코드 만 줄 쓰기"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView9"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="Day 1 of 7"-->
+
+                    <!--android:textSize="15sp" />-->
+            <!--</LinearLayout>-->
+        <!--</TableRow>-->
+
+    <!--</TableLayout>-->
+
+    <!--<android.support.constraint.ConstraintLayout-->
+        <!--android:id="@+id/constraint_bottom"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="58dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginBottom="0dp"-->
+        <!--android:background="@drawable/grad_bg">-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/imageButton9"-->
+            <!--android:layout_width="35dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginLeft="8dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginRight="8dp"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:background="@drawable/home"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/drawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:background="@color/cardview_dark_background"
+        android:layout_gravity="start">
+
+        <TextView
+            android:id="@+id/setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="My page"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/how_it_works"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/setting"
+            android:layout_marginTop="30dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="How it works"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+
+
+        <TextView
+            android:id="@+id/cs_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/how_it_works"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:text="CustomerService"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cs_text"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:text="LogOut"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+
+
+        <Button
+            android:id="@+id/btn_closeDrawer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cardview_dark_background"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/ic_home"
+            />
+
+
+    </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckGoals">
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="632dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="70dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0">
+
+            <TextView
+                android:id="@+id/checkGoals_setScreenTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="YonJu의 약속"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/share_btn"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_gravity="right|top"-->
+                <!--android:layout_weight="1"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:background="#00ff0000"-->
+                <!--android:scaleType="fitCenter"-->
+                <!--app:srcCompat="?attr/actionModeShareDrawable" />-->
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/checkGoalTitle_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:paddingTop="40dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:text="약속 제목"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/checkGoalDescription_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="약속 설명"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:padding="5dp"
+            android:layout_weight="0"
+            android:orientation="horizontal"
+            android:background="@drawable/textlines">
+
+            <TextView
+                android:id="@+id/goalDetail_textView"
+                android:layout_width="122dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="세부사항"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/checkGoals_secretMode_textView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:gravity="center_vertical|right"
+                android:paddingRight="10dp"
+                android:text="비밀글 OFF" />
+
+            <ToggleButton
+                android:id="@+id/checkGoals_toggleButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="0"
+                android:text="toggleButton"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/ic_lock_open_black_24dp" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:stretchColumns="1"
+            android:background="@drawable/underline"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="약속 체결일"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/checkGoal_contractDate_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:textSize="12sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이행 시작일"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/checkGoal_startDate_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:textSize="12sp" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이행 종료일"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/checkGoal_endDate_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:textSize="12sp" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="총 이행기간"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/checkGoal_numberOfDays_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="보    증    금"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/checkGoalDeposit_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:text="0"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="P"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <!--<TableRow>-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="열람횟수"-->
+            <!--android:textSize="13sp" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/checkGoalVisit_textView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:text="0"-->
+            <!--android:gravity="right"-->
+            <!--android:textSize="13sp" />-->
+            <!--<TextView-->
+            <!--android:id="@+id/textView21"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="번"-->
+            <!--android:paddingLeft="10dp"/>-->
+            <!--</TableRow>-->
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tableLayout_checkGoals_finalResult"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_height="100dp"
+            android:layout_weight="1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/checkGoal_progress_title_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[이행결과]"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/checkGoal_progress_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:paddingLeft="10dp"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/checkGoal_finalResult_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[최종평가]"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:text="성실성: "
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/checkGoal_rating_sincerity"
+                    android:layout_width="709dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:text="목표의 현실성: "
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/checkGoal_rating_realistic"
+                    android:layout_width="709dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:text="주변의 응원도: "
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/checkGoal_rating_cheer"
+                    android:layout_width="709dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:text="자기발전 정도: "
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/checkGoal_rating_improvement"
+                    android:layout_width="709dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:textSize="12sp" />
+            </TableRow>
+
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/checkGoals_setFinalResult_btn"
+            android:layout_width="328dp"
+            android:layout_height="69dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0"
+            android:text="최종 결과 입력하기"
+            android:textSize="15sp"
+
+            />
+
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/grad_bg">
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/home"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/report_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_assignment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6" />
+
+        <ImageButton
+            android:id="@+id/share_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_share_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

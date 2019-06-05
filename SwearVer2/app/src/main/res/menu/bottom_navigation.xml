@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="home"/>
+    <item
+    android:id="@+id/nav_referee"
+    android:icon="@drawable/whistle"
+    android:title="referee"/>
+    <item
+        android:id="@+id/nav_suppor"
+        android:icon="@drawable/support"
+        android:title="support"/>
+    <item
+        android:id="@+id/nav_money"
+        android:icon="@drawable/money"
+        android:title="money"/>
+</menu>

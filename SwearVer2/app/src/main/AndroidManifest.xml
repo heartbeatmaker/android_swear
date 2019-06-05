@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.swearVer2">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".ScreenReceiver"
+        android:allowBackup="true"
+        android:icon="@drawable/pinky_promise"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".FriendManagingActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAUsu9SAQg4FDKO48qxaP9Qu8y9mg92WQs" />
+
+        <activity android:name=".CheckFriendsGoal" />
+        <activity android:name=".MapActivity" />
+        <activity android:name=".UserPoint" />
+        <activity android:name=".EditReports" />
+        <activity android:name=".DeleteDialog" />
+        <activity android:name=".Setting" />
+        <activity android:name=".CustomerService" />
+        <activity android:name=".Intro" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".SignIn" />
+        <activity android:name=".PickUserInterest" />
+        <activity android:name=".AdInsertion" />
+        <activity android:name=".LockScreen" />
+        <activity android:name=".CheckGoalsAfterConfirm" />
+        <activity android:name=".Alert" />
+        <activity android:name=".ReadMessage" />
+        <activity android:name=".SendMessage" />
+        <activity android:name=".AddImages" />
+        <activity android:name=".CheckGoalsAfterFinalConfirm" />
+        <activity android:name=".ReadFriendsGoal" />
+        <activity android:name=".Search" />
+        <activity android:name=".MainAfterPeriod" />
+        <activity android:name=".FinalResult" />
+        <activity android:name=".CheckReportsRevised" />
+        <activity android:name=".ImagePopup" />
+        <activity android:name=".ReportView" />
+        <activity android:name=".NewGoalsWithCalendar" />
+        <activity android:name=".NewReports" />
+        <activity
+            android:name=".CheckGoals"
+            android:parentActivityName=".Main">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main" />
+        </activity>
+        <activity android:name=".CheckReports" />
+        <activity android:name=".CreateNewGoals" />
+        <activity android:name=".Loading" />
+        <activity android:name=".Main" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.swearVer2.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <receiver
+            android:name=".ServiceAlarmReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote"></receiver> <!-- 아래 2개 receiver는 사용하지 않음 -->
+        <receiver
+            android:name=".ServiceReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote"></receiver>
+        <receiver
+            android:name=".OriginAlarmReceiver"
+            android:process=":remote"></receiver> <!--  -->
+        <service
+            android:name=".RestartService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".SensorService"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>
